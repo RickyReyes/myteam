@@ -41,7 +41,7 @@ a {
 p {
 	font-size: 15px;
 	line-height: 25px;
-	font-weight: 600;
+	font-weight: 500;
 	z-index: 2;
 	position: relative;
 }
@@ -74,9 +74,14 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	font-weight: 500;
 }
 
 .header__nav {
+	display: none;
+}
+
+.header__btn {
 	display: none;
 }
 
@@ -133,7 +138,7 @@ h3 {
 	}
 }
 
-.features__pink-line {
+.pink-line {
 	@include line;
 	background-color: $light-coral;
 }
@@ -238,6 +243,13 @@ h3 {
 		border: 2px solid $sac-state-green;
 		background-color: transparent;
 		margin: 1.5rem auto 0;
+		@media (hover: hover) {
+			&:hover {
+				background-color: $sac-state-green;
+				border-color: $sac-state-green;
+				color: white;
+			}
+		}
 	}
 	.ready__bg {
 		position: absolute;
@@ -266,10 +278,15 @@ footer {
 	justify-content: center;
 	gap: 1.5rem;
 	padding-top: 1.5rem;
-	font-weight: 600;
+	font-weight: 500;
 	a {
 		text-decoration: none;
 		color: white;
+		@media (hover: hover) {
+			&:hover {
+				color: $light-coral;
+			}
+		}
 	}
 }
 
@@ -289,6 +306,13 @@ footer {
 	padding-top: 2.5rem;
 	img {
 		width: 1.5rem;
+		cursor: pointer;
+		@media (hover: hover) {
+			&:hover {
+				filter: invert(55%) sepia(14%) saturate(23) hue-rotate(-45deg)
+					brightness(119%) contrast(86%);
+			}
+		}
 	}
 }
 
@@ -302,6 +326,12 @@ footer {
 .about {
 	p {
 		text-align: center;
+	}
+}
+
+.about__line-and-p {
+	.pink-line {
+		display: none;
 	}
 }
 
@@ -524,6 +554,26 @@ footer {
 		font-family: $font;
 		font-weight: 400;
 	}
+	&:required {
+		box-shadow: none;
+	}
+
+	&:required:focus::placeholder {
+		color: $light-coral;
+	}
+	&:required:focus:invalid {
+		border-color: $light-coral;
+		position: relative;
+		&::after {
+			position: absolute;
+			content: "This field is required";
+			color: $light-coral;
+			top: 0;
+			left: 0;
+			width: 50px;
+			border: 200px solid white;
+		}
+	}
 }
 
 textarea:focus,
@@ -597,6 +647,11 @@ input:focus {
 		font-size: 1.125rem;
 		a {
 			color: white;
+			@media (hover: hover) {
+				&:hover {
+					color: $light-coral;
+				}
+			}
 		}
 	}
 	.header__btn {
@@ -611,6 +666,14 @@ input:focus {
 		white-space: nowrap;
 		a {
 			color: white;
+		}
+		@media (hover: hover) {
+			&:hover {
+				a {
+					color: $midnight-green;
+				}
+				background-color: #fff;
+			}
 		}
 	}
 
@@ -631,6 +694,9 @@ input:focus {
 		flex-direction: row;
 		gap: 1.5rem;
 		padding-top: 0;
+		&:first-of-type {
+			gap: 2rem;
+		}
 	}
 	.feature__name-and-p {
 		display: flex;
@@ -773,6 +839,7 @@ input:focus {
 			padding-top: 2.5rem;
 		}
 		.contact__bg-top {
+			display: block;
 			position: absolute;
 			left: -100px;
 			top: 100px;
@@ -787,12 +854,12 @@ input:focus {
 /* desktop */
 @media screen and (min-width: 1300px) {
 	header {
-		padding-left: 10rem;
-		padding-right: 10rem;
+		padding-left: 12%;
+		padding-right: 12%;
 	}
 	.contact {
-		padding-left: 10rem;
-		padding-right: 10rem;
+		padding-left: 12%;
+		padding-right: 12%;
 	}
 	.hero__flex {
 		display: flex;
@@ -801,7 +868,7 @@ input:focus {
 		gap: 1.5rem;
 	}
 	.hero {
-		padding: 8rem 10rem 250px;
+		padding: 8rem 12% 250px;
 		h1 {
 			padding: 0;
 			text-align: left;
@@ -841,7 +908,10 @@ input:focus {
 	.features {
 		display: flex;
 		gap: 50px;
-		padding: 12.375rem 10rem 8.75rem;
+		padding: 12.375rem 12% 8.75rem;
+		& > * {
+			flex: 1;
+		}
 		h2 {
 			font-size: 3rem;
 			line-height: 3rem;
@@ -856,7 +926,7 @@ input:focus {
 		top: unset;
 		bottom: 0;
 	}
-	.features__pink-line {
+	.pink-line {
 		position: relative;
 		bottom: 54px;
 	}
@@ -868,6 +938,8 @@ input:focus {
 	}
 
 	.reviews {
+		padding: 8.75rem 12%;
+
 		h2 {
 			font-size: 3rem;
 			line-height: 3rem;
@@ -875,9 +947,6 @@ input:focus {
 		}
 	}
 
-	.reviews {
-		padding: 8.75rem 10rem;
-	}
 	.review-container {
 		display: flex;
 		justify-content: space-between;
@@ -902,7 +971,7 @@ input:focus {
 	}
 
 	footer {
-		padding: 3rem 10rem;
+		padding: 3rem 12%;
 		display: flex;
 		flex-direction: row;
 		.footer__address {
@@ -917,6 +986,69 @@ input:focus {
 			padding-top: 0;
 			align-items: flex-end;
 			justify-content: space-between;
+		}
+	}
+
+	.about__hero {
+		padding: 10rem 12% 7.5rem;
+	}
+	.about__heading-and-p {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		gap: 187px;
+		h1 {
+			padding: 0;
+			margin-top: -36px;
+		}
+	}
+
+	.about__line-and-p {
+		display: flex;
+		flex-direction: column;
+		.pink-line {
+			display: block;
+		}
+		p {
+			text-align: left;
+			max-width: 600px;
+		}
+	}
+
+	.about__directors {
+		padding: 8.75rem 12%;
+	}
+	.about__director-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: 30px;
+	}
+
+	.clients__bg {
+		position: absolute;
+		top: 0;
+		left: 0x;
+	}
+
+	.contact {
+		padding: 7.75rem 12%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		& > * {
+			flex-grow: 1;
+		}
+	}
+	.contact__flex-left {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.contact__flex-right {
+		form {
+			padding-top: 0;
+			max-width: 542px;
 		}
 	}
 }

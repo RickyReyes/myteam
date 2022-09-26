@@ -14,7 +14,7 @@ a {
 p {
   font-size: 15px;
   line-height: 25px;
-  font-weight: 600;
+  font-weight: 500;
   z-index: 2;
   position: relative;
 }
@@ -47,9 +47,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-weight: 500;
 }
 
 .header__nav {
+  display: none;
+}
+
+.header__btn {
   display: none;
 }
 
@@ -106,7 +111,7 @@ h3 {
   text-align: left;
 }
 
-.features__pink-line {
+.pink-line {
   width: 50px;
   height: 4px;
   background-color: #f67e7e;
@@ -220,6 +225,13 @@ h3 {
   background-color: transparent;
   margin: 1.5rem auto 0;
 }
+@media (hover: hover) {
+  .ready button:hover {
+    background-color: #012f34;
+    border-color: #012f34;
+    color: white;
+  }
+}
 .ready .ready__bg {
   position: absolute;
   bottom: -1.25rem;
@@ -246,11 +258,16 @@ footer ul {
   justify-content: center;
   gap: 1.5rem;
   padding-top: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 .footer__links a {
   text-decoration: none;
   color: white;
+}
+@media (hover: hover) {
+  .footer__links a:hover {
+    color: #f67e7e;
+  }
 }
 
 .footer__address {
@@ -270,6 +287,12 @@ footer ul {
 }
 .footer__icons img {
   width: 1.5rem;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .footer__icons img:hover {
+    filter: invert(55%) sepia(14%) saturate(23) hue-rotate(-45deg) brightness(119%) contrast(86%);
+  }
 }
 
 .footer__copyright {
@@ -281,6 +304,10 @@ footer ul {
 /* ABOUT */
 .about p {
   text-align: center;
+}
+
+.about__line-and-p .pink-line {
+  display: none;
 }
 
 .about__hero {
@@ -521,6 +548,31 @@ footer ul {
   font-family: "Livvic";
   font-weight: 400;
 }
+.contact input:required {
+  box-shadow: none;
+}
+.contact input:required:focus::-moz-placeholder {
+  color: #f67e7e;
+}
+.contact input:required:focus:-ms-input-placeholder {
+  color: #f67e7e;
+}
+.contact input:required:focus::placeholder {
+  color: #f67e7e;
+}
+.contact input:required:focus:invalid {
+  border-color: #f67e7e;
+  position: relative;
+}
+.contact input:required:focus:invalid::after {
+  position: absolute;
+  content: "This field is required";
+  color: #f67e7e;
+  top: 0;
+  left: 0;
+  width: 50px;
+  border: 200px solid white;
+}
 
 textarea:focus,
 input:focus {
@@ -610,6 +662,13 @@ input:focus {
   .header__nav a {
     color: white;
   }
+}
+@media screen and (min-width: 768px) and (hover: hover) {
+  .header__nav a:hover {
+    color: #f67e7e;
+  }
+}
+@media screen and (min-width: 768px) {
   .header__btn {
     display: block;
     margin-left: auto;
@@ -631,29 +690,50 @@ input:focus {
   .header__btn a {
     color: white;
   }
+}
+@media screen and (min-width: 768px) and (hover: hover) {
+  .header__btn:hover {
+    background-color: #fff;
+  }
+  .header__btn:hover a {
+    color: #014e56;
+  }
+}
+@media screen and (min-width: 768px) {
   .features {
     padding: 100px;
   }
   .features h2 {
     max-width: 500px;
   }
+}
+@media screen and (min-width: 768px) {
   .feature-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     padding-top: 4rem;
   }
+}
+@media screen and (min-width: 768px) {
   .feature {
     flex-direction: row;
     gap: 1.5rem;
     padding-top: 0;
   }
+  .feature:first-of-type {
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
   .feature__name-and-p {
     display: flex;
     flex-direction: column;
     align-items: start;
     text-align: left;
   }
+}
+@media screen and (min-width: 768px) {
   .reviews {
     padding: 100px 100px calc(100px - 2rem);
   }
@@ -661,6 +741,8 @@ input:focus {
     max-width: 475px;
     padding-bottom: 2rem;
   }
+}
+@media screen and (min-width: 768px) {
   .ready {
     display: flex;
     align-items: center;
@@ -676,38 +758,56 @@ input:focus {
   .ready button {
     margin: 0;
   }
+}
+@media screen and (min-width: 768px) {
   footer {
     padding: 3.5rem 2.5rem;
   }
+}
+@media screen and (min-width: 768px) {
   .footer__top-flex {
     display: flex;
     justify-content: space-between;
   }
+}
+@media screen and (min-width: 768px) {
   .footer__logo-and-links {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
+}
+@media screen and (min-width: 768px) {
   .footer__logo {
     margin: 0;
   }
+}
+@media screen and (min-width: 768px) {
   .footer__links {
     line-height: 25px;
   }
+}
+@media screen and (min-width: 768px) {
   .footer__address {
     padding-top: 0;
     text-align: right;
   }
+}
+@media screen and (min-width: 768px) {
   .footer__bottom-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 2rem;
   }
+}
+@media screen and (min-width: 768px) {
   .footer__icons,
 .footer__copyright {
     padding: 0;
   }
+}
+@media screen and (min-width: 768px) {
   .about h1 {
     padding: 7rem 0 1.5rem;
     font-size: 4rem;
@@ -720,29 +820,45 @@ input:focus {
   .about .about__hero-bg {
     bottom: 0;
   }
+}
+@media screen and (min-width: 768px) {
   .about__directors {
     padding: 100px 100px 128px;
   }
+}
+@media screen and (min-width: 768px) {
   .about__directors-bg-top {
     top: 0;
   }
+}
+@media screen and (min-width: 768px) {
   .about__director-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4.75rem 0.75rem;
   }
+}
+@media screen and (min-width: 768px) {
   .director {
     height: 250px;
   }
+}
+@media screen and (min-width: 768px) {
   .director__quote {
     padding: 0;
   }
+}
+@media screen and (min-width: 768px) {
   .clients {
     padding: 100px 2.5rem;
   }
+}
+@media screen and (min-width: 768px) {
   .clients__bg {
     left: 0;
   }
+}
+@media screen and (min-width: 768px) {
   .clients__logos {
     flex-direction: row;
     gap: 4rem;
@@ -758,6 +874,8 @@ input:focus {
     transform: scale(1);
     flex: 1;
   }
+}
+@media screen and (min-width: 768px) {
   .contact {
     padding: 7rem 8rem;
   }
@@ -771,6 +889,7 @@ input:focus {
     padding-top: 2.5rem;
   }
   .contact .contact__bg-top {
+    display: block;
     position: absolute;
     left: -100px;
     top: 100px;
@@ -782,12 +901,12 @@ input:focus {
 /* desktop */
 @media screen and (min-width: 1300px) {
   header {
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: 12%;
+    padding-right: 12%;
   }
   .contact {
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: 12%;
+    padding-right: 12%;
   }
   .hero__flex {
     display: flex;
@@ -796,7 +915,7 @@ input:focus {
     gap: 1.5rem;
   }
   .hero {
-    padding: 8rem 10rem 250px;
+    padding: 8rem 12% 250px;
   }
   .hero h1 {
     padding: 0;
@@ -835,7 +954,10 @@ input:focus {
   .features {
     display: flex;
     gap: 50px;
-    padding: 12.375rem 10rem 8.75rem;
+    padding: 12.375rem 12% 8.75rem;
+  }
+  .features > * {
+    flex: 1;
   }
   .features h2 {
     font-size: 3rem;
@@ -849,20 +971,20 @@ input:focus {
     top: unset;
     bottom: 0;
   }
-  .features__pink-line {
+  .pink-line {
     position: relative;
     bottom: 54px;
   }
   .feature__name-and-p p {
     max-width: 420px;
   }
+  .reviews {
+    padding: 8.75rem 12%;
+  }
   .reviews h2 {
     font-size: 3rem;
     line-height: 3rem;
     max-width: 932px;
-  }
-  .reviews {
-    padding: 8.75rem 10rem;
   }
   .review-container {
     display: flex;
@@ -886,7 +1008,7 @@ input:focus {
     font-size: 3rem;
   }
   footer {
-    padding: 3rem 10rem;
+    padding: 3rem 12%;
     display: flex;
     flex-direction: row;
   }
@@ -902,5 +1024,62 @@ input:focus {
     padding-top: 0;
     align-items: flex-end;
     justify-content: space-between;
+  }
+  .about__hero {
+    padding: 10rem 12% 7.5rem;
+  }
+  .about__heading-and-p {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 187px;
+  }
+  .about__heading-and-p h1 {
+    padding: 0;
+    margin-top: -36px;
+  }
+  .about__line-and-p {
+    display: flex;
+    flex-direction: column;
+  }
+  .about__line-and-p .pink-line {
+    display: block;
+  }
+  .about__line-and-p p {
+    text-align: left;
+    max-width: 600px;
+  }
+  .about__directors {
+    padding: 8.75rem 12%;
+  }
+  .about__director-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  .clients__bg {
+    position: absolute;
+    top: 0;
+    left: 0x;
+  }
+  .contact {
+    padding: 7.75rem 12%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .contact > * {
+    flex-grow: 1;
+  }
+  .contact__flex-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact__flex-right form {
+    padding-top: 0;
+    max-width: 542px;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -9,7 +9,7 @@ const Features = () => {
 				alt="svg"
 			/>
 			<div>
-				<div className="features__pink-line"></div>
+				<div className="pink-line"></div>
 				<h2>Build & manage distributed teams like no one else.</h2>
 			</div>
 			<div className="feature-container">
