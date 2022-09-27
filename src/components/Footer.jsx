@@ -6,11 +6,13 @@ const Footer = () => {
 		<footer>
 			<div className="footer__top-flex">
 				<div className="footer__logo-and-links">
-					<img
-						className="footer__logo"
-						src="src/assets/logo.svg"
-						alt="logo"
-					/>
+					<Link to="/">
+						<img
+							className="footer__logo"
+							src="src/assets/logo.svg"
+							alt="logo"
+						/>
+					</Link>
 					<ul className="footer__links">
 						<li>
 							<Link to="/">home</Link>

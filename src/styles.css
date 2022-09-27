@@ -24,6 +24,77 @@ p {
   font-family: "Livvic";
 }
 
+/* mobile nav */
+.mobile-nav {
+  position: absolute;
+  height: 100vh;
+  background-color: #2c6269;
+  color: white;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 66%;
+  z-index: 5;
+  padding: 7rem 3rem;
+  box-shadow: 100px 0px 10px 1000px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+@media (hover: hover) {
+  .mobile-nav .mobile-nav__close:hover {
+    filter: invert(55%) sepia(14%) saturate(23) hue-rotate(-45deg) brightness(119%) contrast(86%);
+  }
+}
+.mobile-nav .mobile-nav__close-container {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3.5rem 1.5rem;
+}
+.mobile-nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.mobile-nav a {
+  text-decoration: none;
+  color: white;
+}
+@media (hover: hover) {
+  .mobile-nav a:hover {
+    color: #f67e7e;
+  }
+}
+.mobile-nav button {
+  border: 0;
+  padding: 0.75rem 2rem;
+  border-radius: 24px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  font-family: "Livvic";
+  display: block;
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  margin-top: 2rem;
+}
+@media (hover: hover) {
+  .mobile-nav button:hover {
+    background-color: #fff;
+    color: #2c6269;
+  }
+}
+
+.mobile-nav__bg {
+  position: absolute;
+  right: -100px;
+  bottom: 0;
+}
+
 .hero {
   padding: 0 1.5rem;
   position: relative;
@@ -55,6 +126,7 @@ header {
 }
 
 .header__btn {
+  color: white;
   display: none;
 }
 
@@ -251,6 +323,7 @@ footer ul {
   width: 6rem;
   margin: 0 auto;
   display: block;
+  cursor: pointer;
 }
 
 .footer__links {
@@ -388,6 +461,11 @@ footer ul {
 .director__cross {
   background-color: #f67e7e;
 }
+@media (hover: hover) {
+  .director__cross:hover {
+    background-color: #79c8c7;
+  }
+}
 
 .director__close {
   background-color: #79c8c7;
@@ -398,6 +476,12 @@ footer ul {
   display: flex;
   gap: 1rem;
   padding-top: 1.5rem;
+}
+@media (hover: hover) {
+  .director__icons > *:hover {
+    cursor: pointer;
+    filter: invert(55%) sepia(14%) saturate(23) hue-rotate(-45deg) brightness(119%) contrast(86%);
+  }
 }
 
 .director__quote {
@@ -432,64 +516,16 @@ footer ul {
   transform: scale(0.5);
 }
 
-/* mobile nav */
-.mobile-nav {
-  position: absolute;
-  height: 100vh;
-  background-color: #2c6269;
-  color: white;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 66%;
-  z-index: 3;
-  padding: 7rem 3rem;
-  box-shadow: 100px 0px 10px 1000px rgba(0, 0, 0, 0.6);
-  overflow: hidden;
-}
-.mobile-nav ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  font-size: 1.125rem;
-  font-weight: 600;
-}
-.mobile-nav a {
-  text-decoration: none;
-  color: white;
-}
-.mobile-nav button {
-  border: 0;
-  padding: 0.75rem 2rem;
-  border-radius: 24px;
-  font-size: 1.125rem;
-  font-weight: 600;
-  font-family: "Livvic";
-  display: block;
-  cursor: pointer;
-  color: white;
-  background-color: transparent;
-  border: 2px solid white;
-  margin-top: 2rem;
-}
-
-.mobile-nav__bg {
-  position: absolute;
-  right: -100px;
-  bottom: 0;
-}
-
 /* contact */
 .contact {
   background-color: #014e56;
-  padding: 4rem 1.5rem 5rem;
+  padding: 0 1.5rem 5rem;
   position: relative;
   overflow: hidden;
 }
 .contact h3 {
   color: #f67e7e;
-  padding-top: 1rem;
+  padding-top: -0.25rem;
   line-height: 2rem;
 }
 .contact ul {
@@ -564,14 +600,12 @@ footer ul {
   border-color: #f67e7e;
   position: relative;
 }
-.contact input:required:focus:invalid::after {
-  position: absolute;
-  content: "This field is required";
+
+.field-required {
   color: #f67e7e;
-  top: 0;
-  left: 0;
-  width: 50px;
-  border: 200px solid white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.5rem 0.9rem;
 }
 
 textarea:focus,
@@ -619,6 +653,13 @@ input:focus {
   border: 2px solid white;
   margin-top: 1.5rem;
   margin-right: auto;
+}
+@media (hover: hover) {
+  .contact button:hover {
+    border-color: #002529;
+    background-color: #002529;
+    color: white;
+  }
 }
 
 /* tablet */
@@ -686,17 +727,13 @@ input:focus {
     font-weight: 500;
     font-size: 1.125rem;
     white-space: nowrap;
-  }
-  .header__btn a {
     color: white;
   }
 }
 @media screen and (min-width: 768px) and (hover: hover) {
   .header__btn:hover {
-    background-color: #fff;
-  }
-  .header__btn:hover a {
     color: #014e56;
+    background-color: #fff;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1047,7 +1084,8 @@ input:focus {
   }
   .about__line-and-p p {
     text-align: left;
-    max-width: 600px;
+    max-width: 700px;
+    font-size: 1.125rem;
   }
   .about__directors {
     padding: 8.75rem 12%;

@@ -51,6 +51,74 @@ p {
 	font-family: $font;
 }
 
+/* mobile nav */
+.mobile-nav {
+	position: absolute;
+	height: 100vh;
+	background-color: $police-blue;
+	color: white;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 66%;
+	z-index: 5;
+	padding: 7rem 3rem;
+	box-shadow: 100px 0px 10px 1000px rgba(black, 0.6);
+	overflow: hidden;
+	.mobile-nav__close {
+		@media (hover: hover) {
+			&:hover {
+				filter: invert(55%) sepia(14%) saturate(23) hue-rotate(-45deg)
+					brightness(119%) contrast(86%);
+			}
+		}
+	}
+
+	.mobile-nav__close-container {
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 3.5rem 1.5rem;
+	}
+	ul {
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		font-size: 1.125rem;
+		font-weight: 600;
+	}
+	a {
+		text-decoration: none;
+		color: white;
+		@media (hover: hover) {
+			&:hover {
+				color: $light-coral;
+			}
+		}
+	}
+	button {
+		@include btn;
+		color: white;
+		background-color: transparent;
+		border: 2px solid white;
+		margin-top: 2rem;
+		@media (hover: hover) {
+			&:hover {
+				background-color: $white;
+				color: $police-blue;
+			}
+		}
+	}
+}
+
+.mobile-nav__bg {
+	position: absolute;
+	right: -100px;
+	bottom: 0;
+}
+
 .hero {
 	padding: 0 1.5rem;
 	position: relative;
@@ -82,6 +150,7 @@ header {
 }
 
 .header__btn {
+	color: white;
 	display: none;
 }
 
@@ -271,6 +340,7 @@ footer {
 	width: 6rem;
 	margin: 0 auto;
 	display: block;
+	cursor: pointer;
 }
 
 .footer__links {
@@ -411,6 +481,11 @@ footer {
 
 .director__cross {
 	background-color: $light-coral;
+	@media (hover: hover) {
+		&:hover {
+			background-color: $rapture-blue;
+		}
+	}
 }
 .director__close {
 	background-color: $rapture-blue;
@@ -421,6 +496,15 @@ footer {
 	display: flex;
 	gap: 1rem;
 	padding-top: 1.5rem;
+	& > * {
+		@media (hover: hover) {
+			&:hover {
+				cursor: pointer;
+				filter: invert(55%) sepia(14%) saturate(23) hue-rotate(-45deg)
+					brightness(119%) contrast(86%);
+			}
+		}
+	}
 }
 
 .director__quote {
@@ -455,57 +539,16 @@ footer {
 	}
 }
 
-/* mobile nav */
-.mobile-nav {
-	position: absolute;
-	height: 100vh;
-	background-color: $police-blue;
-	color: white;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	width: 66%;
-	z-index: 3;
-	padding: 7rem 3rem;
-	box-shadow: 100px 0px 10px 1000px rgba(black, 0.6);
-	overflow: hidden;
-	ul {
-		list-style-type: none;
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-		font-size: 1.125rem;
-		font-weight: 600;
-	}
-	a {
-		text-decoration: none;
-		color: white;
-	}
-	button {
-		@include btn;
-		color: white;
-		background-color: transparent;
-		border: 2px solid white;
-		margin-top: 2rem;
-	}
-}
-
-.mobile-nav__bg {
-	position: absolute;
-	right: -100px;
-	bottom: 0;
-}
-
 /* contact */
 
 .contact {
 	background-color: $midnight-green;
-	padding: 4rem 1.5rem 5rem;
+	padding: 0 1.5rem 5rem;
 	position: relative;
 	overflow: hidden;
 	h3 {
 		color: $light-coral;
-		padding-top: 1rem;
+		padding-top: -0.25rem;
 		line-height: 2rem;
 	}
 	ul {
@@ -564,16 +607,14 @@ footer {
 	&:required:focus:invalid {
 		border-color: $light-coral;
 		position: relative;
-		&::after {
-			position: absolute;
-			content: "This field is required";
-			color: $light-coral;
-			top: 0;
-			left: 0;
-			width: 50px;
-			border: 200px solid white;
-		}
 	}
+}
+
+.field-required {
+	color: $light-coral;
+	font-size: 0.75rem;
+	font-weight: 600;
+	padding: 0.5rem 0.9rem;
 }
 
 textarea:focus,
@@ -603,6 +644,13 @@ input:focus {
 	border: 2px solid white;
 	margin-top: 1.5rem;
 	margin-right: auto;
+	@media (hover: hover) {
+		&:hover {
+			border-color: $dark-green;
+			background-color: $dark-green;
+			color: white;
+		}
+	}
 }
 
 /* tablet */
@@ -637,6 +685,7 @@ input:focus {
 	.header__toggle-btn {
 		display: none;
 	}
+
 	.header__nav {
 		display: flex;
 		align-items: center;
@@ -664,14 +713,11 @@ input:focus {
 		font-weight: 500;
 		font-size: 1.125rem;
 		white-space: nowrap;
-		a {
-			color: white;
-		}
+		color: white;
 		@media (hover: hover) {
 			&:hover {
-				a {
-					color: $midnight-green;
-				}
+				color: $midnight-green;
+
 				background-color: #fff;
 			}
 		}
@@ -1011,7 +1057,8 @@ input:focus {
 		}
 		p {
 			text-align: left;
-			max-width: 600px;
+			max-width: 700px;
+			font-size: 1.125rem;
 		}
 	}
 

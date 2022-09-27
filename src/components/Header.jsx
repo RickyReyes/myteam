@@ -16,9 +16,11 @@ const Header = ({ showMobileNav, setShowMobileNav }) => {
 					<Link to="/about">about</Link>
 				</nav>
 			</div>
-			<button className="header__btn">
-				<Link to="/contact">contact us</Link>
-			</button>
+
+			<Link className="header__btn-container" to="/contact">
+				<button className="header__btn">contact us</button>
+			</Link>
+
 			<img
 				onClick={() => setShowMobileNav((prev) => !prev)}
 				className="header__toggle-btn"

@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Contact = () => {
-	document.body.scrollTop = document.documentElement.scrollTop = 0;
-
+	useEffect(() => {
+		document.body.scrollTop = document.documentElement.scrollTop = 0;
+	}, []);
+	const [emailMissing, setEmailMissing] = useState(false);
 	return (
 		<section className="contact">
 			<img
@@ -44,7 +46,21 @@ const Contact = () => {
 			<div className="contact__flex-right">
 				<form action="#">
 					<input type="text" placeholder="Name" />
-					<input type="text" placeholder="Email Address" required />
+					<input
+						onChange={(e) => {
+							e.preventDefault();
+							setEmailMissing(e.target.validity.valueMissing);
+						}}
+						type="text"
+						placeholder="Email Address"
+						required
+					/>
+					<i
+						className="field-required"
+						style={{ display: emailMissing ? "block" : "none" }}
+					>
+						This field is required
+					</i>
 					<input type="text" placeholder="Company Name" />
 					<input type="text" placeholder="Title" />
 					<textarea type="text" placeholder="Message"></textarea>

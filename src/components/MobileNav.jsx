@@ -1,9 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const MobileNav = ({ showMobileNav, setShowMobileNav }) => {
+const MobileNav = ({ navRef, showMobileNav, setShowMobileNav }) => {
 	return (
-		<nav className={`mobile-nav ${showMobileNav ? "show" : "hidden"}`}>
+		<nav
+			ref={navRef}
+			className={`mobile-nav ${showMobileNav ? "show" : "hidden"}`}
+		>
+			<div
+				onClick={() => setShowMobileNav(false)}
+				className="mobile-nav__close-container"
+			>
+				<img
+					className="mobile-nav__close"
+					src="/src/assets/icon-close.svg"
+					alt="close icon"
+				/>
+			</div>
 			<ul>
 				<li>
 					<Link onClick={() => setShowMobileNav(false)} to="/">
@@ -21,7 +34,7 @@ const MobileNav = ({ showMobileNav, setShowMobileNav }) => {
 			</Link>
 			<img
 				className="mobile-nav__bg"
-				src="/src/assets/bg-pattern-about-1-mobile-nav-1.png"
+				src="src/assets/bg-pattern-about-1-mobile-nav-1.png"
 				alt="svg"
 			/>
 		</nav>
