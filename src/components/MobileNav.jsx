@@ -13,7 +13,7 @@ const MobileNav = ({ navRef, showMobileNav, setShowMobileNav }) => {
 			>
 				<img
 					className="mobile-nav__close"
-					src="/assets/icon-close.svg"
+					src="../assets/icon-close.svg"
 					alt="close icon"
 				/>
 			</div>
@@ -34,7 +34,7 @@ const MobileNav = ({ navRef, showMobileNav, setShowMobileNav }) => {
 			</Link>
 			<img
 				className="mobile-nav__bg"
-				src="/assets/bg-pattern-about-1-mobile-nav-1.png"
+				src="../assets/bg-pattern-about-1-mobile-nav-1.png"
 				alt="svg"
 			/>
 		</nav>

@@ -9,7 +9,7 @@ const Footer = () => {
 					<Link to="/">
 						<img
 							className="footer__logo"
-							src="/assets/logo.svg"
+							src="../assets/logo.svg"
 							alt="logo"
 						/>
 					</Link>
@@ -34,21 +34,21 @@ const Footer = () => {
 					<li>
 						<img
 							className="footer__logo"
-							src="/assets/icon-facebook.svg"
+							src="../assets/icon-facebook.svg"
 							alt="facebook logo"
 						/>
 					</li>
 					<li>
 						<img
 							className="footer__logo"
-							src="/assets/icon-pinterest.svg"
+							src="../assets/icon-pinterest.svg"
 							alt="pinterest logo"
 						/>
 					</li>
 					<li>
 						<img
 							className="footer__logo"
-							src="/assets/icon-twitter.svg"
+							src="../assets/icon-twitter.svg"
 							alt="twitter logo"
 						/>
 					</li>

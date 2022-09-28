@@ -5,7 +5,7 @@ const Reviews = () => {
 		<section className="reviews">
 			<img
 				className="reviews__bg-img-top"
-				src="/assets/bg-pattern-home-4-about-3.svg"
+				src="../assets/bg-pattern-home-4-about-3.svg"
 				alt="logo"
 			/>
 			<h2>
@@ -16,7 +16,7 @@ const Reviews = () => {
 				<div className="review">
 					<img
 						className="icon-quotes"
-						src="/assets/icon-quotes.svg"
+						src="../assets/icon-quotes.svg"
 						alt="icon"
 					/>
 					<p>
@@ -29,14 +29,14 @@ const Reviews = () => {
 					<i>Product Manager at Bookmark</i>
 					<img
 						className="review__photo"
-						src="/assets/avatar-kady.jpg"
+						src="../assets/avatar-kady.jpg"
 						alt="review avatar"
 					/>
 				</div>{" "}
 				<div className="review">
 					<img
 						className="icon-quotes"
-						src="/assets/icon-quotes.svg"
+						src="../assets/icon-quotes.svg"
 						alt="review avatar"
 					/>
 					<p>
@@ -48,14 +48,14 @@ const Reviews = () => {
 					<i>Founder of Manage</i>
 					<img
 						className="review__photo"
-						src="/assets/avatar-aiysha.jpg"
+						src="../assets/avatar-aiysha.jpg"
 						alt="review avatar"
 					/>
 				</div>{" "}
 				<div className="review">
 					<img
 						className="icon-quotes"
-						src="/assets/icon-quotes.svg"
+						src="../assets/icon-quotes.svg"
 						alt=""
 					/>
 					<p>
@@ -67,14 +67,14 @@ const Reviews = () => {
 					<i>Co-founder of MyPhysio</i>
 					<img
 						className="review__photo"
-						src="/assets/avatar-arthur.jpg"
+						src="../assets/avatar-arthur.jpg"
 						alt=""
 					/>
 				</div>
 			</div>
 			<img
 				className="reviews__bg-img-bottom"
-				src="/assets/bg-pattern-home-5.svg"
+				src="../assets/bg-pattern-home-5.svg"
 				alt=""
 			/>
 		</section>
