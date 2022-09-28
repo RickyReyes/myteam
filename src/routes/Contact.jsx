@@ -9,7 +9,7 @@ const Contact = () => {
 		<section className="contact">
 			<img
 				className="contact__bg-top"
-				src="src/assets/bg-pattern-about-2-contact-1.svg"
+				src="public/assets/bg-pattern-about-2-contact-1.svg"
 				alt="svg"
 			/>
 			<div className="contact__flex-left">
@@ -20,7 +20,7 @@ const Contact = () => {
 					<li>
 						<img
 							className="contact__icon"
-							src="/src/assets/icon-person.svg"
+							src="/public/assets/icon-person.svg"
 							alt="icon"
 						/>
 						<p>The quality of our talent network</p>
@@ -28,7 +28,7 @@ const Contact = () => {
 					<li>
 						<img
 							className="contact__icon"
-							src="/src/assets/icon-cog.svg"
+							src="/public/assets/icon-cog.svg"
 							alt="icon"
 						/>
 						<p>Usage & implementation of our software</p>
@@ -36,7 +36,7 @@ const Contact = () => {
 					<li>
 						<img
 							className="contact__icon"
-							src="/src/assets/icon-chart.svg"
+							src="/public/assets/icon-chart.svg"
 							alt="icon"
 						/>
 						<p>How we help drive innovation</p>
@@ -71,7 +71,7 @@ const Contact = () => {
 			</div>
 			<img
 				className="contact__bg-bottom"
-				src="src/assets/bg-pattern-contact-2.svg"
+				src="public/assets/bg-pattern-contact-2.svg"
 				alt="svg"
 			/>
 		</section>

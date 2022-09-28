@@ -10,10 +10,13 @@ const Director = ({ name, position, imgPath, quote }) => {
 					<p className="director__quote">“{quote}”</p>
 					<ul className="director__icons">
 						<li>
-							<img src="/src/assets/icon-twitter.svg" alt="" />
+							<img src="/public/assets/icon-twitter.svg" alt="" />
 						</li>
 						<li>
-							<img src="/src/assets/icon-linkedin.svg" alt="" />
+							<img
+								src="/public/assets/icon-linkedin.svg"
+								alt=""
+							/>
 						</li>
 					</ul>
 				</>
@@ -21,7 +24,7 @@ const Director = ({ name, position, imgPath, quote }) => {
 				<>
 					<img
 						className="director__photo"
-						src={`src/assets/${imgPath}`}
+						src={`/public/assets/${imgPath}`}
 						alt="director headshot"
 					/>
 					<p className="director__name">{name}</p>
@@ -31,7 +34,7 @@ const Director = ({ name, position, imgPath, quote }) => {
 			<img
 				onClick={() => setShowQuote((prev) => !prev)}
 				className={`director__${showQuote ? "close" : "cross"}`}
-				src={`/src/assets/icon-${showQuote ? "close" : "cross"}.svg`}
+				src={`/public/assets/icon-${showQuote ? "close" : "cross"}.svg`}
 			/>
 		</li>
 	);

@@ -7,7 +7,7 @@ const Header = ({ showMobileNav, setShowMobileNav }) => {
 				<Link className="logo-container" to="/">
 					<img
 						className="logo"
-						src="/src/assets/logo.svg"
+						src="/public/assets/logo.svg"
 						alt="logo"
 					/>
 				</Link>
@@ -24,10 +24,10 @@ const Header = ({ showMobileNav, setShowMobileNav }) => {
 			<img
 				onClick={() => setShowMobileNav((prev) => !prev)}
 				className="header__toggle-btn"
-				src={`/src/assets/icon-${
+				src={`public/assets/icon-${
 					showMobileNav ? "close" : "hamburger"
 				}.svg`}
-				alt="hamburger icon"
+				alt="icon"
 			/>
 		</header>
 	);

@@ -5,7 +5,7 @@ const Features = () => {
 		<section className="features">
 			<img
 				className="features__bg-img"
-				src="./src/assets/bg-pattern-about-4.svg"
+				src="./public/assets/bg-pattern-about-4.svg"
 				alt="svg"
 			/>
 			<div>
@@ -14,7 +14,7 @@ const Features = () => {
 			</div>
 			<div className="feature-container">
 				<div className="feature">
-					<img src="./src/assets/icon-person.svg" alt="svg" />
+					<img src="./public/assets/icon-person.svg" alt="svg" />
 					<div className="feature__name-and-p">
 						<div className="feature__name">
 							Experienced Individuals
@@ -26,7 +26,7 @@ const Features = () => {
 					</div>
 				</div>
 				<div className="feature">
-					<img src="./src/assets/icon-cog.svg" alt="svg" />
+					<img src="./public/assets/icon-cog.svg" alt="svg" />
 					<div className="feature__name-and-p">
 						<div className="feature__name">Easy to Implement</div>
 						<p>
@@ -36,7 +36,7 @@ const Features = () => {
 					</div>
 				</div>
 				<div className="feature">
-					<img src="./src/assets/icon-chart.svg" alt="svg" />
+					<img src="./public/assets/icon-chart.svg" alt="svg" />
 					<div className="feature__name-and-p">
 						<div className="feature__name">
 							Enhanced Productivity

@@ -16,7 +16,6 @@ function App() {
 	let navRef = useRef(null);
 	useEffect(() => {
 		let handler = (e) => {
-			console.log(navRef.current);
 			if (e.target.src && e.target.src.includes("icon-close.svg")) {
 				setShowMobileNav(false);
 			} else if (navRef.current && !navRef.current.contains(e.target)) {
