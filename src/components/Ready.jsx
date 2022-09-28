@@ -10,7 +10,7 @@ const Ready = () => {
 			</Link>
 			<img
 				className="ready__bg"
-				src="public/assets/bg-pattern-home-6-about-5.svg"
+				src="/assets/bg-pattern-home-6-about-5.svg"
 				alt="svg"
 			/>
 		</section>

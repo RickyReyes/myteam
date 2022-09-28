@@ -5,7 +5,7 @@ const Hero = () => {
 		<section className="hero">
 			<img
 				className="hero__bg-top"
-				src="public/assets/bg-pattern-home-1.svg"
+				src="/assets/bg-pattern-home-1.svg"
 				alt=""
 			/>
 			<div className="hero__flex">
@@ -28,7 +28,7 @@ const Hero = () => {
 			</div>
 			<img
 				className="hero__bg-bottom"
-				src="/public/assets/bg-pattern-home-2.svg"
+				src="/assets/bg-pattern-home-2.svg"
 				alt=""
 			/>
 		</section>
