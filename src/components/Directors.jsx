@@ -43,7 +43,7 @@ const Directors = () => {
 		<section className="about__directors">
 			<img
 				className="about__directors-bg-top"
-				src="../assets/bg-pattern-about-2-contact-1.svg"
+				src="/bg-pattern-about-2-contact-1.svg"
 				alt="svg"
 			/>
 			<h3>Meet the directors</h3>
@@ -54,7 +54,7 @@ const Directors = () => {
 			</ul>
 			<img
 				className="about__directors-bg-bottom"
-				src="../assets/bg-pattern-home-4-about-3.svg"
+				src="/bg-pattern-home-4-about-3.svg"
 				alt="svg"
 			/>
 		</section>

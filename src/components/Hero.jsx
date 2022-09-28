@@ -3,11 +3,7 @@ import React from "react";
 const Hero = () => {
 	return (
 		<section className="hero">
-			<img
-				className="hero__bg-top"
-				src="../assets/bg-pattern-home-1.svg"
-				alt=""
-			/>
+			<img className="hero__bg-top" src="/bg-pattern-home-1.svg" alt="" />
 			<div className="hero__flex">
 				<h1 className="hero__heading">
 					Find the
@@ -28,7 +24,7 @@ const Hero = () => {
 			</div>
 			<img
 				className="hero__bg-bottom"
-				src="../assets/bg-pattern-home-2.svg"
+				src="/bg-pattern-home-2.svg"
 				alt=""
 			/>
 		</section>
