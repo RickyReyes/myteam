@@ -1,6 +1,6 @@
 # Frontend Mentor - myteam website
 
-![Design preview for the myteam website coding challenge](assets/preview.jpg)
+![Design preview for the myteam website coding challenge](/preview.jpg)
 
 ## Welcome! 👋
 
