@@ -583,7 +583,8 @@ footer {
 	padding-top: 3.5rem;
 }
 
-.contact input {
+.contact input,
+.contact textarea {
 	background-color: $midnight-green;
 	border: 0;
 	font-size: 15px;

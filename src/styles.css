@@ -559,7 +559,8 @@ footer ul {
   padding-top: 3.5rem;
 }
 
-.contact input {
+.contact input,
+.contact textarea {
   background-color: #014e56;
   border: 0;
   font-size: 15px;
@@ -569,34 +570,38 @@ footer ul {
   width: 100%;
   font-family: "Livvic";
 }
-.contact input::-moz-placeholder {
+.contact input::-moz-placeholder, .contact textarea::-moz-placeholder {
   color: rgba(255, 255, 255, 0.8);
   font-family: "Livvic";
   font-weight: 400;
 }
-.contact input:-ms-input-placeholder {
+.contact input:-ms-input-placeholder, .contact textarea:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.8);
   font-family: "Livvic";
   font-weight: 400;
 }
-.contact input::placeholder {
+.contact input::placeholder,
+.contact textarea::placeholder {
   color: rgba(255, 255, 255, 0.8);
   font-family: "Livvic";
   font-weight: 400;
 }
-.contact input:required {
+.contact input:required,
+.contact textarea:required {
   box-shadow: none;
 }
-.contact input:required:focus::-moz-placeholder {
+.contact input:required:focus::-moz-placeholder, .contact textarea:required:focus::-moz-placeholder {
   color: #f67e7e;
 }
-.contact input:required:focus:-ms-input-placeholder {
+.contact input:required:focus:-ms-input-placeholder, .contact textarea:required:focus:-ms-input-placeholder {
   color: #f67e7e;
 }
-.contact input:required:focus::placeholder {
+.contact input:required:focus::placeholder,
+.contact textarea:required:focus::placeholder {
   color: #f67e7e;
 }
-.contact input:required:focus:invalid {
+.contact input:required:focus:invalid,
+.contact textarea:required:focus:invalid {
   border-color: #f67e7e;
   position: relative;
 }
