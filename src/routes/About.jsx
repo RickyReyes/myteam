@@ -23,7 +23,7 @@ const About = () => {
 				</div>
 				<img
 					className="about__hero-bg"
-					src="/bg-pattern-about-1-mobile-nav-1.svg"
+					src="assets/bg-pattern-about-1-mobile-nav-1.svg"
 					alt="svg"
 				/>
 			</section>
