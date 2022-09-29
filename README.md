@@ -43,4 +43,5 @@ Users should be able to:
 ### What I learned
 
 - Change SVG color on hover:
-I use this [CodePen](https://codepen.io/sosuke/pen/Pjoqqp), which takes a hex color for the color you want to be applied on hover, and returns a CSS filter property along with values. te this note and add/remove/edit lines above based on what links you'd like to share.**
+
+I use this [CodePen](https://codepen.io/sosuke/pen/Pjoqqp), which takes a hex color for the color you want to be applied on hover, and returns a CSS filter property along with values.
