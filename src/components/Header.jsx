@@ -20,7 +20,7 @@ const Header = ({ showMobileNav, setShowMobileNav }) => {
 			<img
 				onClick={() => setShowMobileNav((prev) => !prev)}
 				className="header__toggle-btn"
-				src={`/icon-${showMobileNav ? "close" : "hamburger"}.svg`}
+				src={`assets/icon-${showMobileNav ? "close" : "hamburger"}.svg`}
 				alt="icon"
 			/>
 		</header>

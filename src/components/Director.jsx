@@ -21,7 +21,7 @@ const Director = ({ name, position, imgPath, quote }) => {
 				<>
 					<img
 						className="director__photo"
-						src={`/${imgPath}`}
+						src={`assets/${imgPath}`}
 						alt="director headshot"
 					/>
 					<p className="director__name">{name}</p>
@@ -31,7 +31,7 @@ const Director = ({ name, position, imgPath, quote }) => {
 			<img
 				onClick={() => setShowQuote((prev) => !prev)}
 				className={`director__${showQuote ? "close" : "cross"}`}
-				src={`/icon-${showQuote ? "close" : "cross"}.svg`}
+				src={`assets/icon-${showQuote ? "close" : "cross"}.svg`}
 			/>
 		</li>
 	);
